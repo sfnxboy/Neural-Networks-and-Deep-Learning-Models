@@ -1,4 +1,4 @@
-# Neural-Networks-and-Deep-Learning-Models
+# Neural Networks and Deep Learning Models
 
 **Tools Used**
 - Python
