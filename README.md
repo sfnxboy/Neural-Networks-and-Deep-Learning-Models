@@ -88,6 +88,6 @@ Although the numbers are constantly debated, many data engineers believe that ev
 
 When implementing a deep learning classification model, one must take some time to critically think about the following:  
 - What about this dataset makes it complex? Is it a variable? Is it the distribution of values? Is it the size of the dataset?
-- Which variables should I investigate prior to implementing my model? What does the distribution look like? Hint: Use Pandas' Series.plot.density() method to find out.
+- Which variables should I investigate prior to implementing my model? What does the distribution look like? Hint: Use Pandas' `Series.plot.density()` method to find out.
 - What outcome am I looking for from the model? Which activation function should I use to get my desired outcome?
 - What is my accuracy cutoff? In other words, what percent testing accuracy must my model exceed?
