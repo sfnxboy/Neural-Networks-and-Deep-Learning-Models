@@ -40,7 +40,7 @@ At first glance, the perceptron model is very similar to other classification an
 
 A data scientist must not just think critically about how a particular model works, but also about if it is the best model for the dataset. There are pros and cons to every model, and some fit certain data sets. Contrary to what you may believe, neural networks are not the ultimate solution to all data science problems. As shown in the figure above, there are trade-offs to using the new and popular neural network (and deep learning) models over their older, often more lightweight statistics and machine learning counterparts.
 
-**Logistic Regression vs. Basic Neural Network**
+**Logistic Regression vs. Basic Neural Network**  
 A logistic regression model is a classification algorithm that can analyze continuous and categorical variables. Using a combination of input variables, logistic regression predicts the probability of the input data belonging to one of two groups. If the probability is above a predetermined cutoff, the sample is assigned to the first group, otherwise it is assigned to the second. Simply, logistic regression is a statistical model that mathematically determines its probability of belonging to one of two groups. At the heart of the logistic regression model is the sigmoid curve, which is used to produce the probability (between 0 and 1) of the input data belonging to the first group. This sigmoid curve is the exact same curve used in the sigmoid activation function of a neural network. In fact, a basic neural network using the sigmoid activation function is effectively a logistic regression model:  
 ![image](https://user-images.githubusercontent.com/68082808/100650496-03bbcf80-3312-11eb-8bfb-ed8442302854.png)  
 
