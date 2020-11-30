@@ -33,3 +33,7 @@ Perceptrons are capable of classifying datasets with many dimensions; however, t
 * The perceptron model is stopped or encounters an error during training.
 
 At first glance, the perceptron model is very similar to other classification and regression models; however, the power of the perceptron model comes from its ability to handle multidimensional data and interactivity with other perceptron models. As more multidimensional perceptrons are meshed together and layered, a new, more powerful classification and regression algorithm emerges—the neural network.
+
+### Models  
+![image](https://user-images.githubusercontent.com/68082808/100649864-108bf380-3311-11eb-8d4c-14f06fc6e92c.png)  
+A data scientist must not just think critically about how a particular model works, but also about if it is the best model for the dataset. There are pros and cons to every model, and some fit certain data sets. Contrary to what you may believe, neural networks are not the ultimate solution to all data science problems. As shown in the figure above, there are trade-offs to using the new and popular neural network (and deep learning) models over their older, often more lightweight statistics and machine learning counterparts.
