@@ -84,3 +84,15 @@ With more formal applications of neural network and deep learning models, data s
 - The model is protected from computer problems (power failure, computer crash, etc.). Worst-case scenario: We would lose five epochs' worth of optimization.
 - We can restore previous model weight coefficients to try and revert overfitting.
 
+Checkpoints are a great way to save model weights during training, but they fall short when it comes to sharing a trained model. we can use the Keras Sequential model's save method to export the entire model (weights, structure, and configuration settings) to an Hierarchical Data Format (HDF5) file. Once saved, anyone can import the exact same trained model to their environment by using the Keras load_model method and use it for analysis.  
+```
+# Export our model to HDF5 file
+nn_new.save("trained_attrition.h5")
+
+# Import the model to a new object
+nn_imported = tf.keras.models.load_model('trained_attrition.h5')
+
+# Evaluate the model using the test data
+model_loss, model_accuracy = nn_new.evaluate(X_test_scaled,y_test,verbose=2)
+print(f"Loss: {model_loss}, Accuracy: {model_accuracy}")
+```
