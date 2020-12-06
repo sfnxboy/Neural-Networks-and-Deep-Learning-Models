@@ -33,3 +33,17 @@ Perceptrons are capable of classifying datasets with many dimensions; however, t
 * The perceptron model is stopped or encounters an error during training.
 
 At first glance, the perceptron model is very similar to other classification and regression models; however, the power of the perceptron model comes from its ability to handle multidimensional data and interactivity with other perceptron models. As more multidimensional perceptrons are meshed together and layered, a new, more powerful classification and regression algorithm emerges—the neural network.
+
+### Basic Neural Network  
+Be sure to run the following code in your terminal to indure the TensorFlow 2.0 programming library is installed on your computer.  
+```
+# Installs latest version of TensorFlow 2.X 
+pip install --upgrade tensorflow
+```  
+We can apply the same Scikit-learn pipeline of **model -> fit -> predict/transform** one would use for other machine learning algorithms to run a neural network model. This is generally the process:  
+1.	Decide on a model, and create a model instance.
+2.	Split into training and testing sets, and preprocess the data.
+3.	Train/fit the training data to the model. (Note that "train" and "fit" are used interchangeably in Python libraries as well as the data field.)
+4.	Use the model for predictions and transformations.  
+
+Check this [Basic Neural Network]() file as a reference. There are four big terms machine learning engineers should be familiar when evaluating a model’s performance. The **loss metric** measures how poorly a model characterizes the data after each iteration (or epoch). The **evaluation metric** measures the quality of a machine learning model, specifically accuracy for classification models and MSE (mean squared error) for regression models. For model predictive accuracy, the higher the number the better, whereas for regression models, MSE should reduce to zero. The **optimization function** shapes and molds a neural network model while it is being trained to ensure that it performs to the best of its ability. **Activation functions** are applied to each hidden layer in the model that allows the model to combine outputs from neurons into a single classifier/regression model. The activation function is a mathematical function applied to the end of each "neuron" (or each individual perceptron model) that transforms the output to a quantitative value. This quantitative output is used as an input value for other layers in the neural network model. There are a wide variety of activation functions that can be used for many specific purposes.
