@@ -35,11 +35,6 @@ Perceptrons are capable of classifying datasets with many dimensions; however, t
 At first glance, the perceptron model is very similar to other classification and regression models; however, the power of the perceptron model comes from its ability to handle multidimensional data and interactivity with other perceptron models. As more multidimensional perceptrons are meshed together and layered, a new, more powerful classification and regression algorithm emerges—the neural network.
 
 ### Basic Neural Network  
-Be sure to run the following code in your terminal to indure the TensorFlow 2.0 programming library is installed on your computer.  
-```
-# Installs latest version of TensorFlow 2.X 
-pip install --upgrade tensorflow
-```  
 We can apply the same Scikit-learn pipeline of **model -> fit -> predict/transform** one would use for other machine learning algorithms to run a neural network model. This is generally the process:  
 1.	Decide on a model, and create a model instance.
 2.	Split into training and testing sets, and preprocess the data.
