@@ -50,7 +50,7 @@ As with all machine learning models, creating an ideal classification or regress
 •	Check out your input dataset.  
 It is always a good idea to check the input data and ensure that there are no variables or set of outliers that are causing the model to be confused. Although neural networks are tolerant of noisy characteristics in a dataset, neural networks can learn bad habits (like the brain does).
 
-•	Add more neurons to a hidden layer, or hidden layers.  
+•	Add more neurons to a hidden layer, or add more hidden layers.  
 Instead of adding more neurons, we could change the structure of the model by adding additional hidden layers, which allows neurons to train on activated input values, instead of looking at new training data. Therefore, a neural network with multiple layers can identify nonlinear characteristics of the input data without requiring more input data. This concept of a multiple-layered neural network is known as a **deep learning neural network.**
 
 •	Use a different activation function for the hidden layers.  
