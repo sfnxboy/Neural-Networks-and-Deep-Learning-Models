@@ -45,19 +45,19 @@ Check out this [Basic Neural Network](https://github.com/sfnxboy/Neural-Networks
 ### Activation Functions  
 The activation function is a mathematical function applied to the end of each "neuron" (or each individual perceptron model) that transforms the output to a quantitative value. This quantitative output is used as an input value for other layers in the neural network model. There are a wide variety of activation functions that can be used for many specific purposes; however, most neural networks will use one of the following activation functions:  
 
-•	Linear
+•	Linear  
 The linear function returns the sum of our weighted inputs without transformation.  
 
-•	ReLU (Rectified Linear Unit)
+•	ReLU (Rectified Linear Unit)  
 This function returns a value from 0 to infinity, so any negative input through the activation function is 0. It is the most used activation function in neural networks due to its simplifying output, but may not be appropriate for simpler models. The ReLU function is ideal for looking at positive nonlinear input data for classification or regression.  
 
 •	Leaky ReLU
 This function is an alternative to the ReLU function, whereby negative input values will return small negative values. One may consider using a leaky ReLU function instead of a ReLU function if the dataset contains nonlinear data with many negative inputs.  
 
-•	Tanh
+•	Tanh  
 This function is identified by a characteristic S curve, however it transforms the output to a range between -1 and 1. This function can be used for classification or regression models.  
 
-•	Sigmoid
+•	Sigmoid  
 This function is identified by a characteristic S curve. It transforms the output to a range between 0 and 1, which is ideal for binary classification.
 
 
