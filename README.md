@@ -12,6 +12,23 @@ A Neural Network is a powerful machine learning technique that is modelled after
 
 In this project we work with a mock company, Alphabet Soup, a foundation dedicated to supporting organizations that protect the environment, improve people's well-being, and unify the world. This company has raised and donated a great sum of money to invest in life saving technologies and organized re-forestation groups around the world. Our task will be to analyze the impact of each donation and vet potential recepients. This helps ensure that the foundation's money is being used effectively. Unfortunately, not every dollar the foundation donates is impactful. Sometimes another organization may recieve funds and disapear. As a result, we must work as data scientists to predict which organizations are worth donating to and which are too high risk. This problem seems too complex for statistical and machine learning models we have used. Instead, we will design and train a deep neural network which will evaluate all types of input data and produce a clear decision making result.
 
+## AlphabetSoupCharity Report  
+### Overview of Analysis  
+With a [CSV](https://github.com/sfnxboy/Neural-Networks-and-Deep-Learning-Models/blob/main/AlphabetSoupCharity/Resources/charity_data.csv) containing more than 34,000 organizations that the mock company, Alphabet Soup, has recieved over the years, we will attempt to build a neural network model that can accurately predict what features (or characteristics) organizations have that indicate that they will be a succesful investment. Within this dataset there are a number of columns that capture the metadata about each organization, such as the following:  
+
+- **EIN** and **NAME**—Identification columns  
+- **APPLICATION_TYPE**—Alphabet Soup application type  
+- **AFFILIATION**—Affiliated sector of industry  
+- **CLASSIFICATION**—Government organization classification  
+- **USE_CASE**—Use case for funding  
+- **ORGANIZATION**—Organization type  
+- **STATUS**—Active status  
+- **INCOME_AMT**—Income classification  
+- **SPECIAL_CONSIDERATIONS**—Special consideration for application  
+- **ASK_AMT**—Funding amount requested  
+- **IS_SUCCESSFUL**—Was the money used effectively  
+
+
 
 ## Notes
 
