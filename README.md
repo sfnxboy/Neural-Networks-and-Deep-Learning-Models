@@ -85,3 +85,21 @@ To address the limitations of the basic neural network, we can implement a more 
 Deep neural network models also are commonly referred to as **deep learning models** due to their ability to learn from example data, regardless of the complexity or data input type. Just like humans, deep learning models can identify patterns, determine severity, and adapt to changing input data from a wide variety of data sources. Compared to basic neural network models, which require many neurons to identify nonlinear characteristics, deep learning models only need a few neurons across a few hidden layers to identify the same nonlinear characteristics.  
 
 In addition, deep learning models can train on images, natural language data, soundwaves, and traditional tabular data (data that fits in a table or Data Frame), all with minimal preprocessing and direction. The best feature of deep learning models is its capacity to systematically process multivariate and abstract data while simultaneously achieving performance results that can mirror or even exceed human-level performance. 
+
+### Evaluating Neural Network Models  
+```
+# Evaluate the model using the test data
+model_loss, model_accuracy = nn_new.evaluate(X_test_scaled,y_test,verbose=2)
+model_performance = print(f"Loss: {model_loss}, Accuracy: {model_accuracy}")
+model_performance
+
+# Create a DataFrame containing training history
+history_df = pd.DataFrame(fit_model.history, index=range(1,len(fit_model.history["loss"])+1))
+
+# Plot the loss
+history_df.plot(y="loss")
+
+# Plot the accuracy
+history_df.plot(y="accuracy")
+```  
+When training data, the model will output a degree of loss and accuracy. It is important to note that this calculation is based on the training data. The code above evaluates the loss and accuracy of the test data. It is important to note that if the training scores are greater than the evaluation scores, may indicate that there is a chance of overfitting. This applies heavily more for the accuracy metric.
