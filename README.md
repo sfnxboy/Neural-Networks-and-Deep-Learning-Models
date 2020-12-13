@@ -34,7 +34,36 @@ This project consists of three portions. First we will have to preprocess the da
 
 ### Results  
 #### Data Preprocessing  
-Our objective is to build a neural network model that can predict with a reasonable degree of accuracy which organizations are most likely to succeed. Given a dataset with 11 features, we can start off by removing columns that have nothing the machine may find meaningful, such as the `EIN` and `NAME` columns. 
+
+Our objective is to build a neural network model that can predict with a reasonable degree of accuracy which organizations are most likely to succeed. Given a dataset with 11 features, we can start off by removing columns that have nothing the machine may find meaningful, such as the `EIN` and `NAME` columns. The `IS_SUCCESFUL` column will be our target feature for our neural network model. Thankfully the values in that column are already numeric (values are either 1 or 0), so we will not have to encode that column.  
+
+Still, part of the preprocessing process is encoding categorical variables into numeric values so that the machine may find meaning in those features. Sometimes a column has so many unique values, that it may be best to consider 'bucketing' the infrequent occurences into a single variable. I decide to bucket application types that appear less than 250 times into their own category. I made my decision based on the results from the `value_count()` and `.plot.density()` methods. To complete my preprocessing step I create a OneHotEncoder instance to quantify all categorical features.  
+
+#### Compiling, Training, and Evaluating the Model  
+
+I built my first model with 2 hidden layers, with 80 and 30 nodes respectively. The resulted in the following performance score: `loss: 0.5537 - accuracy: 0.7258`. Considering I only ran the first model with 50 epochs, I decided to change the number of epochs and only the number of epochs in the second model. This revision resulted in the following: `loss: 0.5560 - accuracy: 0.7261`. This is an insignificant difference. My next step was to add another hidden later. My hidden layers were programmed as follows:  
+```
+# First hidden layer
+nn_new1.add(
+    tf.keras.layers.Dense(units=hidden_nodes_layer1,
+    input_dim=number_input_features, activation="relu")
+)
+
+# Second hidden layer
+nn_new1.add(tf.keras.layers.Dense(units=hidden_nodes_layer2, activation="relu"))
+
+# Third hidden layer
+nn_new1.add(tf.keras.layers.Dense(units=hidden_nodes_layer3, activation="sigmoid"))
+
+# Output layer
+nn_new1.add(tf.keras.layers.Dense(units=1, activation="sigmoid"))
+```  
+This model had the following performance: `loss: 0.5557 - accuracy: 0.7255`. Again, an insignificant change. 
+
+A rule of thumb is that if your test accuracy score is larger than your training accuracy score, there is a chance that your model promotes over fitting. This happens to be the case for all four models I built and ran. Nonetheless, my performance metrics could not reach a standard I was satisfied with, albiet the model was overfitting. This may be the case because there is a noisy feature that is confusing the machine, or because the data itself does not contain enough information for the machine.
+
+
+
 ## Notes
 
 ### Neural Networks  
