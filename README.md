@@ -58,11 +58,10 @@ nn_new1.add(tf.keras.layers.Dense(units=hidden_nodes_layer3, activation="sigmoid
 # Output layer
 nn_new1.add(tf.keras.layers.Dense(units=1, activation="sigmoid"))
 ```  
-This model had the following performance: `loss: 0.5557 - accuracy: 0.7255`. Again, an insignificant change. 
+This model had the following performance: `loss: 0.5557 - accuracy: 0.7255`. Again, an insignificant change. Adding a third hidden layer did not change the performance of the model by much. In my fourth attempt to build a model I changed the activation function of the second hidden layer to a sigmoid function, the results are as follows: `loss: 0.5526 - accuracy: 0.7258`.
 
-A rule of thumb is that if your test accuracy score is larger than your training accuracy score, there is a chance that your model promotes over fitting. This happens to be the case for all four models I built and ran. Nonetheless, my performance metrics could not reach a standard I was satisfied with, albiet the model was overfitting. This may be the case because there is a noisy feature that is confusing the machine, or because the data itself does not contain enough information for the machine.
-
-
+### Summary  
+A rule of thumb is that if your test accuracy score is larger than your training accuracy score, there is a chance that your model promotes over fitting. This happens to be the case for all four models I built and ran. Nonetheless, my performance metrics could not reach a standard I was satisfied with, albiet all models were likely overfit. This may be the case because there is a noisy feature that is confusing the machine, or because the data itself does not contain enough information for the machine. 
 
 ## Notes
 
